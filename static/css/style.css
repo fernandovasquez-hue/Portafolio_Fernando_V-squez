@@ -8,13 +8,13 @@
 body {
     min-height: 100vh;
     margin: 0;
-    background: linear-gradient(to top, #374b34, #ffd2a9);
+    background: #e8e8e8;
 }
 
 .barra_navegacion{
     display: flex;
     justify-content: space-between;
-    background-color: #000;
+    background-color: #07531a;
     color: white;
     padding: 1.3rem;
     flex-wrap: wrap;
@@ -40,7 +40,19 @@ body {
 }
 
 .enlaces:hover{
-background-color: #374b34;
-color: #ffd2a9;
+background-color: #3d7035;
+color: #f0c399;
 transform: scale(1.1);
+}
+
+.sobre_mi{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.sobre_mi img{
+    border-radius: 50%;
+    width: 10%;
+    height: 100%;
 }
