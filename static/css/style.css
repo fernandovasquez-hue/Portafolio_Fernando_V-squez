@@ -11,13 +11,16 @@ body {
     background: #e8e8e8;
 }
 
+/* ===== BARRA DE NAVEGACIÓN ===== */
 .barra_navegacion {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #07531a;
     color: white;
     padding: 1.3rem;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .botones {
@@ -25,7 +28,8 @@ body {
     gap: 1rem;
     align-items: center;
     flex-wrap: wrap;
-    width: 48%;
+    /* Se quita width: 48% para no colapsar en pantallas pequeñas */
+    max-width: 100%; 
 }
 
 .enlaces {
@@ -36,69 +40,124 @@ body {
     color: #badfb5;
     font-weight: bold;
     background-color: #7c3c00;
-    padding: 0.6rem;
-    width: 17.8%;
+    padding: 0.6rem 1.2rem;
+    /* Sintaxis corregida de la transición */
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
     border-radius: 6px;
-    transition: background-color, transform, color, 0.3s ease;
+    text-align: center;
 }
 
 .enlaces:hover {
     background-color: #3d7035;
     color: #f0c399;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
+/* ===== SECCIÓN SOBRE MÍ ===== */
 .sobre_mi {
     width: 100%;
-    height: 50%;
     display: flex;
     justify-content: space-around;
-    padding: 3%;
+    align-items: center;
+    padding: 3rem 5%;
     background-color: #c2bfbf;
+    gap: 2rem;
 }
 
 .sobre_mi img {
-    border-radius: 8PX;
+    border-radius: 8px;
     border: 3px solid #21b80d;
-    width: 30%;
-    height: 100%;
+    max-width: 350px;
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover;
 }
 
-.habilidades{
+/* ===== SECCIÓN HABILIDADES ===== */
+.habilidades {
     background-color: #a0a0a0;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    padding: 2rem 5%;
+    gap: 1.5rem;
 }
 
-.porcentaje{
+.porcentaje {
     display: flex;
     width: 100%;
-    gap: 10%;
+    gap: 2rem;
+    flex-wrap: wrap; /* Permite que colapsen en vertical si no caben */
 }
-.lenguajes{
-    width: 50%;
+
+.lenguajes,
+.lenguaje_JS {
+    flex: 1; /* Ocupan espacio equitativo */
+    min-width: 280px; /* Ancho mínimo antes de saltar a la siguiente línea */
     padding: 1%;
 }
-.lenguaje_JS{
-    width: 45%;
-    padding: 1%;
-}
+
 .progress-container {
     width: 100%;
     background-color: #b6b5b5;
     border-radius: 8px;
     overflow: hidden;
     height: 24px;
-    border: 1px solid;
+    border: 1px solid #777;
 }
 
 .progress-bar {
     height: 100%;
     background-color: #4caf50;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    line-height: 150%;
     font-size: 14px;
     font-weight: bold;
+}
+
+/* ==========================================
+   MEDIA QUERIES (DISPOSITIVOS MÓVILES Y TABLETS)
+   ========================================== */
+
+/* Tablets y pantallas medianas (768px o menos) */
+@media (max-width: 768px) {
+    .barra_navegacion {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .botones {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sobre_mi {
+        flex-direction: column-reverse; /* Coloca la imagen arriba/abajo según prefieras */
+        text-align: center;
+    }
+
+    .sobre_mi img {
+        width: 60%;
+    }
+}
+
+/* Celulares (480px o menos) */
+@media (max-width: 480px) {
+    .botones {
+        flex-direction: column;
+    }
+
+    .enlaces {
+        width: 100%; /* Botones de ancho completo en celular */
+    }
+
+    .sobre_mi img {
+        width: 85%;
+    }
+
+    .lenguajes,
+    .lenguaje_JS {
+        min-width: 100%;
+    }
 }
