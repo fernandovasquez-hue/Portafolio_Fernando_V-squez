@@ -1,5 +1,5 @@
         /* ==========================================
-           VARIABLES DE COLOR Y TEMAS (CSS3 Custom Props)
+            VARIABLES DE COLOR Y TEMAS (CSS3 Custom Props)
            ========================================== */
         :root {
             /* MODO CLARO: Blanco, Verdes y Tonos Tierra */
@@ -46,7 +46,7 @@
         }
 
         /* ==========================================
-           RESETS Y ESTILOS BASE
+            RESETS Y ESTILOS BASE
            ========================================== */
         * {
             margin: 0;
@@ -120,7 +120,7 @@
         }
 
         /* ==========================================
-           BARRA DE NAVEGACIÓN
+            BARRA DE NAVEGACIÓN
            ========================================== */
         .header {
             position: fixed;
@@ -311,7 +311,7 @@
         }
 
         /* ==========================================
-           SECCIÓN HABILIDADES
+            SECCIÓN HABILIDADES
            ========================================== */
         #habilidades {
             background-color: var(--bg-secondary);
@@ -387,7 +387,7 @@
         }
 
         /* ==========================================
-           SECCIÓN PROYECTOS
+            SECCIÓN PROYECTOS
            ========================================== */
         #proyectos {
             background-color: var(--bg-primary);
@@ -496,7 +496,7 @@
         }
 
         /* ==========================================
-           SECCIÓN EDUCACIÓN
+            SECCIÓN EDUCACIÓN
            ========================================== */
         #educacion {
             background-color: var(--bg-secondary);
@@ -553,7 +553,7 @@
         }
 
         /* ==========================================
-           SECCIÓN CONTACTO
+            SECCIÓN CONTACTO
            ========================================== */
         #contacto {
             background-color: var(--bg-primary);
