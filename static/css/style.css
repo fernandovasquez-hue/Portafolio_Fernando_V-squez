@@ -66,6 +66,7 @@ body {
 
 .habilidades{
     background-color: #a0a0a0;
+    padding: 2%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -101,4 +102,8 @@ body {
     line-height: 150%;
     font-size: 14px;
     font-weight: bold;
+}
+
+.vista_previa{
+    
 }
