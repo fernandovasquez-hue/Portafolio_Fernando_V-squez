@@ -29,7 +29,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     /* Se quita width: 48% para no colapsar en pantallas pequeñas */
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 .enlaces {
@@ -69,8 +69,22 @@ body {
     border: 3px solid #21b80d;
     max-width: 350px;
     width: 100%;
-    height: auto; /* Mantiene la proporción de la imagen */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
     object-fit: cover;
+}
+
+.contenedor-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* Mantiene la proporción clásica de video */
+}
+
+.contenedor-video iframe {
+    width: 100%;
+    height: 80%;
+    border: none;
 }
 
 /* ===== SECCIÓN HABILIDADES ===== */
@@ -87,13 +101,16 @@ body {
     display: flex;
     width: 100%;
     gap: 2rem;
-    flex-wrap: wrap; /* Permite que colapsen en vertical si no caben */
+    flex-wrap: wrap;
+    /* Permite que colapsen en vertical si no caben */
 }
 
 .lenguajes,
 .lenguaje_JS {
-    flex: 1; /* Ocupan espacio equitativo */
-    min-width: 280px; /* Ancho mínimo antes de saltar a la siguiente línea */
+    flex: 1;
+    /* Ocupan espacio equitativo */
+    min-width: 280px;
+    /* Ancho mínimo antes de saltar a la siguiente línea */
     padding: 1%;
 }
 
@@ -136,7 +153,8 @@ body {
     }
 
     .sobre_mi {
-        flex-direction: column-reverse; /* Coloca la imagen arriba/abajo según prefieras */
+        flex-direction: column-reverse;
+        /* Coloca la imagen arriba/abajo según prefieras */
         text-align: center;
     }
 
@@ -152,7 +170,8 @@ body {
     }
 
     .enlaces {
-        width: 100%; /* Botones de ancho completo en celular */
+        width: 100%;
+        /* Botones de ancho completo en celular */
     }
 
     .sobre_mi img {
